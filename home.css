@@ -16,7 +16,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 90%;
     background-color: black;
     display: flex;
     justify-content: space-between;
@@ -72,7 +72,7 @@ a:hover {
 .menu-container {
     margin-top: 120px;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 /* Estilos para los elementos del menú */
@@ -90,7 +90,7 @@ a:hover {
 
 .menu-item-image {
     flex: 1;
-    max-width: 100px;
+    max-width: 250px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
@@ -103,6 +103,7 @@ a:hover {
 
 .item-title {
     font-size: 24px;
+    padding: 25px;
     color: #d4af37;
     margin-bottom: 5px;
 }
