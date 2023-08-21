@@ -224,39 +224,39 @@ const menuData = [
   ];
   // ... (código JavaScript que generas dinámicamente el menú)
 
-const menuItemsContainer = document.getElementById("menu-items");
+  const menuItemsContainer = document.getElementById("menu-items");
 
-menuData.forEach(category => {
-  const categoryTitle = document.createElement("h2");
-  categoryTitle.textContent = category.title;
-  menuItemsContainer.appendChild(categoryTitle);
-
-  category.items.forEach(item => {
-    const menuItem = document.createElement("div");
-    menuItem.className = "menu-item";
-
-    const itemTitle = document.createElement("h3");
-    itemTitle.className = "item-title";
-    itemTitle.textContent = item.title;
-
-    const itemDescription = document.createElement("p");
-    itemDescription.className = "item-description";
-    itemDescription.textContent = item.description;
-
-    const itemPrice = document.createElement("p");
-    itemPrice.className = "item-price";
-    itemPrice.textContent = "Precio: " + item.price;
-
-    const itemImage = document.createElement("img");
-    itemImage.className = "item-image";
-    itemImage.src = item.image;
-    itemImage.alt = item.title;
-
-    menuItem.appendChild(itemTitle);
-    menuItem.appendChild(itemDescription);
-    menuItem.appendChild(itemPrice);
-    menuItem.appendChild(itemImage);
-
-    menuItemsContainer.appendChild(menuItem);
+  menuData.forEach(category => {
+    const categoryTitle = document.createElement("h2");
+    categoryTitle.textContent = category.title;
+    menuItemsContainer.appendChild(categoryTitle);
+  
+    category.items.forEach(item => {
+      const menuItem = document.createElement("div");
+      menuItem.className = "menu-item";
+  
+      const itemTitle = document.createElement("h3");
+      itemTitle.className = "item-title";
+      itemTitle.textContent = item.title;
+  
+      const itemDescription = document.createElement("p");
+      itemDescription.className = "item-description";
+      itemDescription.textContent = item.description;
+  
+      const itemPrice = document.createElement("p");
+      itemPrice.className = "item-price";
+      itemPrice.textContent = item.price;
+  
+      const itemImage = document.createElement("img");
+      itemImage.className = "item-image";
+      itemImage.src = item.image;
+      itemImage.alt = item.title;
+  
+      menuItem.appendChild(itemTitle);
+      menuItem.appendChild(itemDescription);
+      menuItem.appendChild(itemPrice);
+      menuItem.appendChild(itemImage);
+  
+      menuItemsContainer.appendChild(menuItem);
+    });
   });
-});
