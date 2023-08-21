@@ -1,19 +1,19 @@
-const quesoImage = require('./images/queso.jpg');
-const quesoChocloImage = require('./images/queso_choclo.jpg');
-const quesoChampinon = require('./images/queso_champinon.jpg');
-const quesoChampinonChoclo = require('./images/queso_champinon_choclo.jpg');
-const napolitana = require('./images/napolitana.jpg');
-const queso = require('./images/queso.jpg');
-const quesoEspinaca = require('./images/queso_espinaca.jpg');
-const quesoAceituna = require('./images/queso_aceituna.jpg');
-const jamonQueso = require('./images/jamon_queso.jpg');
-const quesoCamaron = require('./images/queso_camaron.jpg');
-const quesoMechada = require('./images/mechada_queso.jpg');
-const mariscos = require('./images/pino_marisco.jpg');
-const Chaparrita = require('./images/chaparrita.jpg');
+const quesoImage = './images/queso.jpg';
+const quesoChocloImage = './images/queso_choclo.jpg';
+const quesoChampinon = './images/queso_champinon.jpg';
+const quesoChampinonChoclo = './images/queso_champinon_choclo.jpg';
+const napolitana = './images/napolitana.jpg';
+const queso = './images/queso.jpg';
+const quesoEspinaca = './images/queso_espinaca.jpg';
+const quesoAceituna = './images/queso_aceituna.jpg';
+const jamonQueso = './images/jamon_queso.jpg';
+const quesoCamaron = './images/queso_camaron.jpg';
+const quesoMechada = './images/mechada_queso.jpg';
+const mariscos = './images/pino_marisco.jpg';
+const Chaparrita = './images/chaparrita.jpg';
 
 
-const papaIndividual = require('./images/IMG-20230816-WA0058.jpg');
+const papaIndividual = './images/IMG-20230816-WA0058.jpg';
 
 const menuData = [
     {
@@ -221,41 +221,54 @@ const menuData = [
             }
         ]
     }
-  ];
-  
-  const menuItemsContainer = document.getElementById("menu-items");
+  ];const menuItemsContainer = document.getElementById("menu-items");
 
   menuData.forEach(category => {
-    const categoryTitle = document.createElement("h2");
-    categoryTitle.textContent = category.title;
-    menuItemsContainer.appendChild(categoryTitle);
+      const categoryId = category.title.toLowerCase().replace(/ /g, '-');
   
-    category.items.forEach(item => {
-      const menuItem = document.createElement("div");
-      menuItem.className = "menu-item";
+      const categoryTitle = document.createElement("h2");
+      categoryTitle.textContent = category.title;
+      categoryTitle.id = categoryId; // Asigna el ID a la categoría
+      menuItemsContainer.appendChild(categoryTitle);
   
-      const itemTitle = document.createElement("h3");
-      itemTitle.className = "item-title";
-      itemTitle.textContent = item.title;
+      category.items.forEach(item => {
+          const menuItem = document.createElement("div");
+          menuItem.className = "menu-item";
   
-      const itemDescription = document.createElement("p");
-      itemDescription.className = "item-description";
-      itemDescription.textContent = item.description;
+          const itemImage = document.createElement("img");
+          itemImage.className = "menu-item-image";
+          itemImage.src = item.image;
+          itemImage.alt = item.title;
+          menuItem.appendChild(itemImage);
   
-      const itemPrice = document.createElement("p");
-      itemPrice.className = "item-price";
-      itemPrice.textContent = item.price;
+          const itemText = document.createElement("div");
+          itemText.className = "menu-item-text";
   
-      const itemImage = document.createElement("img");
-      itemImage.className = "item-image";
-      itemImage.src = item.image;
-      itemImage.alt = item.title;
+          const itemTitle = document.createElement("h3");
+          itemTitle.className = "item-title";
+          itemTitle.textContent = item.title;
+          itemText.appendChild(itemTitle);
   
-      menuItem.appendChild(itemTitle);
-      menuItem.appendChild(itemDescription);
-      menuItem.appendChild(itemPrice);
-      menuItem.appendChild(itemImage);
+          const itemDescription = document.createElement("p");
+          itemDescription.className = "item-description";
+          itemDescription.textContent = item.description;
+          itemText.appendChild(itemDescription);
   
-      menuItemsContainer.appendChild(menuItem);
-    });
+          const itemPrice = document.createElement("p");
+          itemPrice.className = "item-price";
+          itemPrice.textContent = `Precio: ${item.price}`;
+          itemText.appendChild(itemPrice);
+  
+          menuItem.appendChild(itemText);
+          menuItemsContainer.appendChild(menuItem);
+      });
   });
+  
+  menuData.forEach(category => {
+      const categoryLink = document.createElement("a");
+      categoryLink.href = `#${category.title.toLowerCase().replace(/ /g, '-')}`;
+      categoryLink.textContent = category.title;
+      categoryLink.classList.add("navbar-link"); // Agrega una clase para estilizar los enlaces del navbar
+      document.querySelector(".navbar-links").appendChild(categoryLink);
+  });
+  
