@@ -1,19 +1,19 @@
-const quesoImage = require('../images/queso.jpg');
-const quesoChocloImage = require('../images/queso_choclo.jpg');
-const quesoChampinon = require('../images/queso_champinon.jpg');
-const quesoChampinonChoclo = require('../images/queso_champinon_choclo.jpg');
-const napolitana = require('../images/napolitana.jpg');
-const queso = require('../images/queso.jpg');
-const quesoEspinaca = require('../images/queso_espinaca.jpg');
-const quesoAceituna = require('../images/queso_aceituna.jpg');
-const jamonQueso = require('../images/jamon_queso.jpg');
-const quesoCamaron = require('../images/queso_camaron.jpg');
-const quesoMechada = require('../images/mechada_queso.jpg');
-const mariscos = require('../images/pino_marisco.jpg');
-const Chaparrita = require('../images/chaparrita.jpg');
+const quesoImage = require('./images/queso.jpg');
+const quesoChocloImage = require('./images/queso_choclo.jpg');
+const quesoChampinon = require('./images/queso_champinon.jpg');
+const quesoChampinonChoclo = require('./images/queso_champinon_choclo.jpg');
+const napolitana = require('./images/napolitana.jpg');
+const queso = require('./images/queso.jpg');
+const quesoEspinaca = require('./images/queso_espinaca.jpg');
+const quesoAceituna = require('./images/queso_aceituna.jpg');
+const jamonQueso = require('./images/jamon_queso.jpg');
+const quesoCamaron = require('./images/queso_camaron.jpg');
+const quesoMechada = require('./images/mechada_queso.jpg');
+const mariscos = require('./images/pino_marisco.jpg');
+const Chaparrita = require('./images/chaparrita.jpg');
 
 
-const papaIndividual = require('../images/IMG-20230816-WA0058.jpg');
+const papaIndividual = require('./images/IMG-20230816-WA0058.jpg');
 
 const menuData = [
     {
