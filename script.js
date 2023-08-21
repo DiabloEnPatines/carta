@@ -222,7 +222,9 @@ const menuData = [
         ]
     }
   ];
-  const menuItemsContainer = document.getElementById("menu-items");
+  // ... (código JavaScript que generas dinámicamente el menú)
+
+const menuItemsContainer = document.getElementById("menu-items");
 
 menuData.forEach(category => {
   const categoryTitle = document.createElement("h2");
@@ -243,7 +245,7 @@ menuData.forEach(category => {
 
     const itemPrice = document.createElement("p");
     itemPrice.className = "item-price";
-    itemPrice.textContent = item.price;
+    itemPrice.textContent = "Precio: " + item.price;
 
     const itemImage = document.createElement("img");
     itemImage.className = "item-image";
@@ -258,10 +260,3 @@ menuData.forEach(category => {
     menuItemsContainer.appendChild(menuItem);
   });
 });
-
-
-
-
-
-
-  
