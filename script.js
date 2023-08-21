@@ -222,8 +222,7 @@ const menuData = [
         ]
     }
   ];
-  // ... (código JavaScript que generas dinámicamente el menú)
-
+  
   const menuItemsContainer = document.getElementById("menu-items");
 
   menuData.forEach(category => {
