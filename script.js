@@ -20,73 +20,73 @@ const menuData = [
       title: 'Empanadas',
       items: [
         {
-          title: 'Empanada Queso Pollo Choclo',
+          title: 'Queso Pollo Choclo',
           description: 'Rellena con Queso, Pollo Picado y Choclo en granos.',
           price: '$2.400',
           image: quesoImage
         },
         {
-          title: 'Empanada Queso Choclo',
+          title: 'Queso Choclo',
           description: 'Relleno de Queso y Choclo en granos.',
           price: '$2.100',
           image: quesoChocloImage
         },
         {
-            title: 'Empanada Queso Champiñon',
+            title: 'Queso Champiñon',
             description: 'Relleno de Queso y Champiñón natural picado.',
             price: '$2.200',
             image: quesoChampinon
         },
         {
-            title: 'Empanada Queso Champiñon Choclo',
+            title: 'Queso Champiñon Choclo',
             description: 'Relleno de Queso, Champiñón Natural Picado y Choclo en granos.',
             price: '$2.400',
             image: quesoChampinonChoclo
         },
         {
-            title: 'Empanada Napolitana',
+            title: 'Napolitana',
             description: 'Napolitana rellena con queso, tomate y jamón picado, más aceituna entera y un toque de orégano.',
             price: '$2.200',
             image: napolitana
         },
         {
-            title: 'Empanada Queso',
+            title: 'Queso',
             description: 'Rellena con Queso',
             price: '$1.900',
             image: queso
         },
         {
-            title: 'Empanada Queso Espinaca',
+            title: 'Queso Espinaca',
             description: 'Rellena con Queso y Espinaca picada',
             price: '$2.100',
             image: quesoEspinaca
         },
         {
-            title: 'Empanada Queso Aceituna',
+            title: 'Queso Aceituna',
             description: 'Rellena con Queso y aceitunas picadas',
             price: '$2.100',
             image: quesoAceituna
         },
         {
-            title: 'Empanada Jamón Queso',
+            title: 'Jamón Queso',
             description: 'Rellena con Jamón picado y Queso',
             price: '$2.100',
             image: jamonQueso
         },
         {
-            title: 'Empanada Queso Camarón',
+            title: 'Queso Camarón',
             description: 'Rellena con Queso y Camarones picados',
             price: '$2.500',
             image: quesoCamaron
         },
         {
-            title: 'Empanada Queso Mechada',
+            title: 'Queso Mechada',
             description: 'Rellena con Queso y Carne picada',
             price: '$2.500',
             image: quesoMechada
         },
         {
-            title: 'Empanada Mariscos',
+            title: 'Mariscos',
             description: 'Rellena con Pino y Mariscos',
             price: '$2.400',
             image: mariscos
@@ -103,19 +103,19 @@ const menuData = [
       title: 'Hand Rolls',
       items: [
         {
-          title: 'Hand Roll Pollo',
+          title: 'Pollo',
           description: 'Hand Roll relleno de Pollo, Queso Crema y Cebollín',
           price: '$2.300',
           image: 'ruta_imagen_hand_roll_salmon.jpg',
         },
         {
-            title: 'Hand Roll Champiñon',
+            title: 'Champiñon',
             description: 'Hand Roll relleno de Champiñón, Queso Crema y Cebollín',
             price: '$2.300',
             image: 'ruta_imagen_hand_roll_salmon.jpg',
         },
         {
-          title: 'Hand Roll de Camarón',
+          title: 'Camarón',
           description: 'Hand Roll Relleno con Camarones picado en trozos, queso crema y cebollín.',
           price: '$2.700',
           image: 'ruta_imagen_hand_roll_atun.jpg',
@@ -235,12 +235,7 @@ const menuData = [
           const menuItem = document.createElement("div");
           menuItem.className = "menu-item";
   
-          const itemImage = document.createElement("img");
-          itemImage.className = "menu-item-image";
-          itemImage.src = item.image;
-          itemImage.alt = item.title;
-          menuItem.appendChild(itemImage);
-  
+          
           const itemText = document.createElement("div");
           itemText.className = "menu-item-text";
   
@@ -261,6 +256,13 @@ const menuData = [
   
           menuItem.appendChild(itemText);
           menuItemsContainer.appendChild(menuItem);
+
+          const itemImage = document.createElement("img");
+          itemImage.className = "menu-item-image";
+          itemImage.src = item.image;
+          itemImage.alt = item.title;
+          menuItem.appendChild(itemImage);
+  
       });
   });
   

@@ -12,23 +12,25 @@ body {
 }
 
 /* Agrega estilos para el navbar */
+/* Estilos para el navbar */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 90%;
+    width: 100%; /* Cambia el ancho al 100% */
     background-color: black;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+    flex-direction: column; /* Cambia la dirección a columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    padding: 10px; /* Ajusta el espaciado */
     z-index: 1000;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilos para el logo en el navbar */
 .navbar-logo img {
-    height: 60px;
+    height: 100px;
 }
 
 /* Estilos para los enlaces del navbar */
@@ -70,27 +72,24 @@ a:hover {
 
 /* Contenedor de menú */
 .menu-container {
-    margin-top: 120px;
+    margin-top: 150px;
     text-align: center;
     padding: 10px;
 }
-
 /* Estilos para los elementos del menú */
 .menu-item {
-    width: 95%;
+    display: flex;
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
     margin: 20px;
     padding: 20px;
     background-color: rgba(212, 175, 55, 0.2);
     border: 2px solid #d4af37;
     border-radius: 10px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    display: flex;
 }
 
 .menu-item-image {
-    flex: 1;
-    max-width: 250px;
+    max-width: 50%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
@@ -98,12 +97,12 @@ a:hover {
 }
 
 .menu-item-text {
-    flex: 2;
+    flex: 1;
 }
 
 .item-title {
     font-size: 24px;
-    padding: 25px;
+    padding: 5px 0;
     color: #d4af37;
     margin-bottom: 5px;
 }
